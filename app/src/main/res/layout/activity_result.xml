@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ResultActivity">
+
+    <TextView
+        android:id="@+id/headline_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Analysis result"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="224px"
+        android:layout_height="224px"
+        android:background="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/results_TableLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headline_textView" />
+
+    <TableLayout
+        android:id="@+id/results_TableLayout"
+        android:layout_marginHorizontal="30dp"
+        android:gravity="center"
+        android:stretchColumns="0,1,2,3"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        app:layout_constraintBottom_toTopOf="@+id/buttons_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView">
+
+        <TableRow
+            android:background="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="1dp"
+                android:paddingTop="20dp"
+                android:paddingBottom="10dp"
+                android:fontFamily="@font/noto_sans_palmyrene_regular"
+                android:text="Symbol"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_column="0"
+                android:layout_span="1"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:layout_marginStart="1dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="1dp"
+                android:paddingTop="20dp"
+                android:paddingBottom="10dp"
+                android:fontFamily="@font/noto_sans_palmyrene_regular"
+                android:text="Transcription"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_column="1"
+                android:layout_span="1"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:layout_marginStart="1dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="1dp"
+                android:paddingTop="20dp"
+                android:paddingBottom="10dp"
+                android:fontFamily="@font/noto_sans_palmyrene_regular"
+                android:text="Name"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_column="2"
+                android:layout_span="0"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:layout_marginStart="1dp"
+                android:layout_marginEnd="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="1dp"
+                android:paddingTop="20dp"
+                android:paddingBottom="10dp"
+                android:fontFamily="@font/noto_sans_palmyrene_regular"
+                android:text="%"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:layout_column="2"
+                android:layout_span="0"/>
+
+        </TableRow>
+        <TableRow
+            android:id="@+id/firstResult_row"
+            android:background="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/firstResult_symbol"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginBottom="0dp"
+                android:padding="5dp"
+                android:fontFamily="@font/noto_sans_palmyrene_regular"
+                android:text="𐡠"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textSize="34sp"
+                android:textStyle="bold"
+                android:layout_column="0" />
+
+            <TextView
+                android:id="@+id/firstResult_transcription"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:layout_marginStart="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginBottom="0dp"
+                android:padding="5dp"
+                android:fontFamily="@font/noto_sans_palmyrene_regular"
+                android:text="' / A"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textSize="20sp"
+                android:textStyle="normal"
+                android:layout_column="1" />
+
+            <TextView
+                android:id="@+id/firstResult_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:layout_marginStart="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginBottom="0dp"
+                android:padding="5dp"
+                android:fontFamily="@font/noto_sans_palmyrene_regular"
+                android:text="Aleph"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textSize="15sp"
+                android:textStyle="normal"
+                android:layout_column="2" />
+
+            <TextView
+                android:id="@+id/firstResult_percentage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:layout_marginStart="1dp"
+                android:layout_marginEnd="2dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginBottom="0dp"
+                android:padding="5dp"
+                android:fontFamily="@font/noto_sans_palmyrene_regular"
+                android:text="68"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textSize="15sp"
+                android:textStyle="normal"
+                android:layout_column="3" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/secondResult_row"
+            android:background="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/secondResult_symbol"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginBottom="0dp"
+                android:padding="5dp"
+                android:fontFamily="@font/noto_sans_palmyrene_regular"
+                android:text="𐡠"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textSize="34sp"
+                android:textStyle="bold"
+                android:layout_column="0" />
+
+            <TextView
+                android:id="@+id/secondResult_transcription"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:layout_marginStart="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginBottom="0dp"
+                android:padding="5dp"
+                android:fontFamily="@font/noto_sans_palmyrene_regular"
+                android:text="' / A"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textSize="20sp"
+                android:textStyle="normal"
+                android:layout_column="1" />
+
+            <TextView
+                android:id="@+id/secondResult_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:layout_marginStart="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginBottom="0dp"
+                android:padding="5dp"
+                android:fontFamily="@font/noto_sans_palmyrene_regular"
+                android:text="Aleph"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textSize="15sp"
+                android:textStyle="normal"
+                android:layout_column="2" />
+
+            <TextView
+                android:id="@+id/secondResult_percentage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:layout_marginStart="1dp"
+                android:layout_marginEnd="2dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginBottom="0dp"
+                android:padding="5dp"
+                android:fontFamily="@font/noto_sans_palmyrene_regular"
+                android:text="68"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textSize="15sp"
+                android:textStyle="normal"
+                android:layout_column="3" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/thirdResult_row"
+            android:background="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/thirdResult_symbol"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginBottom="2dp"
+                android:padding="5dp"
+                android:fontFamily="@font/noto_sans_palmyrene_regular"
+                android:text="𐡠"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textSize="34sp"
+                android:textStyle="bold"
+                android:layout_column="0" />
+
+            <TextView
+                android:id="@+id/thirdResult_transcription"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:layout_marginStart="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginBottom="2dp"
+                android:padding="5dp"
+                android:fontFamily="@font/noto_sans_palmyrene_regular"
+                android:text="' / A"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textSize="20sp"
+                android:textStyle="normal"
+                android:layout_column="1" />
+
+            <TextView
+                android:id="@+id/thirdResult_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:layout_marginStart="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginBottom="2dp"
+                android:padding="5dp"
+                android:fontFamily="@font/noto_sans_palmyrene_regular"
+                android:text="Aleph"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textSize="15sp"
+                android:textStyle="normal"
+                android:layout_column="2" />
+
+            <TextView
+                android:id="@+id/thirdResult_percentage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:layout_marginStart="1dp"
+                android:layout_marginEnd="2dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginBottom="2dp"
+                android:padding="5dp"
+                android:fontFamily="@font/noto_sans_palmyrene_regular"
+                android:text="68"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textSize="15sp"
+                android:textStyle="normal"
+                android:layout_column="3" />
+        </TableRow>
+
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/textCopyright"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="10dp"
+        android:text="@string/copyright"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+
+    <!-- layout for results, which user want save -->
+    <HorizontalScrollView
+        android:id="@+id/buffer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:fadeScrollbars="false"
+        app:layout_constraintBottom_toTopOf="@+id/buttons_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/results_TableLayout">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textView_bufferContent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/noto_sans_palmyrene_regular"
+                android:padding="5dp"
+                android:text="buffer content"
+                android:textColor="@color/black"
+                android:textSize="34sp" />
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <LinearLayout
+        android:id="@+id/buttons_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/textCopyright"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buffer_layout">
+
+
+        <Button
+            android:id="@+id/button_nextLetter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="6dp"
+            android:text="Next letter"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/button_clearBuffer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            android:layout_weight="1"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="6dp"
+            android:text="Clear buffer"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/button_exportBuffer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="30dp"
+            android:layout_weight="1"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="6dp"
+            android:text="Export buffer"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">PalmyreneAlphabetTranscription</string>
+    <string name="copyright">© Czech University of Life Sciences Prague</string>
+    <string name="info_text">This application was created by a research team from the Czech University of Life Sciences in Prague, Faculty of Economics and Management, Department of Information Engineering, within a grant project under registration number 2021A0004 funded by CULS Internal Grant Agency.</string>
+    <string name="help_text_step1">In order to recognize a Palmyrene letter from a photo, stone tablet, statue or other source, choose "Draw letter" in the main menu.</string>
+    <string name="help_text_step2">In the black field, redraw the letter as big as possible, and when you are done, confirm it with OK or reset with Cancel.</string>
+    <string name="help_text_step3">If the letter is recognized, the app will show you, which letter it is in Latin, what is it called as well as Unicode number.</string>
+</resources>

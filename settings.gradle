@@ -1,0 +1,2 @@
+rootProject.name = "PalmyreneAlphabetTranscription"
+include ':app'
